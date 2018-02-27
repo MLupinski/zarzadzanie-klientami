@@ -9,7 +9,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 
-		<link href="main.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Ubuntu" rel="stylesheet"> 
 	</head>
 	<body>
@@ -44,18 +44,18 @@
 				
 			</table>
 			<div class="form">
-				<form method="POST" action="addform.php">
-					<button type="submit" name="client" value="add">Dodaj klienta</button>
+				<form method="POST" action="forms.php">
+					<button type="submit" name="add" value="add">Dodaj klienta</button>
 				</form>
 			</div>
 			<div class="form">
-				<form method="POST" action="editform.php">
-					<button type="submit" name="client" value="edit">Edytuj klienta</button>
+				<form method="POST" action="forms.php">
+					<button type="submit" name="edit" value="edit">Edytuj klienta</button>
 				</form>
 			</div>
 			<div class="form">
-				<form method="POST" action="deleteform.php">
-					<button type="submit" name="client" value="delete">Usuń klienta</button>
+				<form method="POST" action="forms.php">
+					<button type="submit" name="delete" value="delete">Usuń klienta</button>
 				</form>
 			</div>
 			<div style="clear:both;"></div>

@@ -14,7 +14,7 @@
 		$stmt->closeCursor();
 		$stmt=null;
 
-		header('Location: addform.php');
+		header('Location: form.php');
 	}
 	elseif(isset($_POST['edit']))
 	{
@@ -29,7 +29,7 @@
 		$stmt->closeCursor();
 		$stmt=null;
 
-		header('Location: editform.php');
+		header('Location: form.php');
 	}	
 	else
 	{
@@ -40,7 +40,7 @@
 		$stmt = $pdo->query("DELETE FROM klienci WHERE ID ='$id'");			
 		$stmt->closeCursor();
 		$stmt=null;	
-		header('Location: deleteform.php');
+		header('Location: form.php');
 	}
 	
 ?>
