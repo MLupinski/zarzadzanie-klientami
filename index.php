@@ -1,6 +1,6 @@
 <?php 
 	require_once('funkcje.php');
- 
+ 	connect();
 echo '					
 <!DOCTYPE html>
 <html lang="pl">
@@ -15,6 +15,7 @@ echo '
 	<body>
 		
 		<div class="container">';
+
 if(isset($_POST['add']))
 {
 	echo '
@@ -30,19 +31,15 @@ if(isset($_POST['add']))
 				<input type="text" placeholder="Kontakt" name="contact">
 				<label>Rachunek: </label>
 				<input type="text" placeholder="Rachunek (BRUTTO w zł)" name="bill">
-				<button type="submit" name="add" value="addclient">Dodaj klienta</button>
+				<button type="submit" name="clientadd" value="clientadd">Dodaj klienta</button>
 			</form>
 			<a href="index.php" class="strz">&larr; Spis Klientów</a>';
-	if(isset($_POST['addclient']))
-	{
-		addclient();
-	}
 }
 else if(isset($_POST['edit']))
 {
 	echo '
-			<span class="lowlet">Edytowanie klienta</span>
-			<form method="POST" action="editclient()" class="formularz">
+			<span class="lowlet">Edycja klienta</span>
+			<form method="POST" action="" class="formularz">
 				<label>ID: </label>
 				<input type="text" placeholder="Identyfikator klienta" name="id">
 				<label>Imię: </label>
@@ -55,7 +52,7 @@ else if(isset($_POST['edit']))
 				<input type="text" placeholder="Kontakt" name="contact">
 				<label>Rachunek: </label>
 				<input type="text" placeholder="Rachunek (BRUTTO w zł)" name="bill">
-				<button type="submit" name="edit" value="add">Edytuj klienta</button>
+				<button type="submit" name="clientedit" value="clientedit">Edytuj klienta</button>
 			</form>
 			<a href="index.php" class="strz">&larr; Spis Klientów</a>';
 }
@@ -63,22 +60,34 @@ else if(isset($_POST['delete']))
 {
 	echo ' 
 			<span class="lowlet">Usuwanie klienta</span>
-			<form method="POST" action="client.php" class="formularz">
+			<form method="POST" action="" class="formularz">
 				<label>ID: </label>
 				<input type="text" placeholder="Identyfikator klienta" name="id">
 				<label>Imię: </label>
 				<input type="text" placeholder="Imię" name="firstname">
 				<label>Nazwisko: </label>
 				<input type="text" placeholder="Nazwisko" name="lastname">
-				<button type="submit" name="delete" value="add">Usuń klienta</button>
+				<button type="submit" name="clientdelete" value="clientdelete">Usuń klienta</button>
 			</form>
 			<a href="index.php" class="strz">&larr; Spis Klientów</a>';
 }
 else
 {
 	echo '
-			<h2>Spis klientów firmy <span style="color: red;">AUTOCRASH</span></h2>
-			<table>
+			<h2>Spis klientów firmy <span style="color: red;">AUTOCRASH</span></h2>';
+	if(isset($_POST['clientadd']))
+	{
+		addclient();
+	}
+	else if(isset($_POST['clientedit']))
+	{
+		editclient();
+	}
+	else if(isset($_POST['clientdelete']))
+	{
+		deleteclient();
+	}
+	echo	'<table>
 				<tr>
 					<th>LP.</th>
 					<th>Imię</th>
@@ -87,7 +96,6 @@ else
 					<th>Kontakt</th>
 					<th>Rachunek (BRUTTO)</th>
 				</tr>';
-				connect();
 				$stmt = $pdo->query('SELECT * FROM klienci');
 					
 					foreach($stmt as $row)
