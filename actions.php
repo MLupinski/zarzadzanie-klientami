@@ -33,7 +33,7 @@ function addclient()
 
 						</form>
 						<a href="index.php" class="strz">&larr; Spis Klientów</a>
-						<a href="form.php" class="strz" style="float:right;">&rarr; Edytuj klienta</a>
+						<a href="forms.php" class="strz" style="float:right;">&rarr; Edytuj klienta</a>
 					</div>
 
 				</body>
@@ -73,7 +73,7 @@ function editclient()
 							<button type="submit" name="edit" value="add">Edytuj klienta</button>
 						</form>
 						<a href="index.php" class="strz">&larr; Spis Klientów</a>
-						<a href="deleteform.php" class="strz" style="float:right;">&rarr; Usuń klienta</a>
+						<a href="forms.php" class="strz" style="float:right;">&rarr; Usuń klienta</a>
 					</div>
 
 				</body>
@@ -107,7 +107,7 @@ function deleteclient()
 						<button type="submit" name="delete" value="add">Usuń klienta</button>
 					</form>
 					<a href="index.php" class="strz">&larr; Spis Klientów</a>
-					<a href="addform.php" class="strz" style="float:right;">&rarr; Dodaj klienta</a>
+					<a href="forms.php" class="strz" style="float:right;">&rarr; Dodaj klienta</a>
 				</div>
 
 			</body>
