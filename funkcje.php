@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 
 function connect()
 {
@@ -107,7 +107,7 @@ function repair()
 	{
 	 	$id = $_GET['id'];
 		global $pdo;
-		$stmt = $pdo->query("UPDATE cars SET DONE = 1 WHERE ID = '$id'");			
+		$stmt = $pdo->query("UPDATE cars SET DONE = 1, REP = 0 WHERE ID = '$id'");			
 		$stmt->closeCursor();
 		$stmt=null;  
 	}

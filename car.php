@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once("funkcje.php");
 connect();
 $id = $_GET['id'];
@@ -48,11 +48,19 @@ echo '
 					$klienci_id = $row['klienci_id'];
 				}
 				$stmt->closeCursor();
-					
-		echo '	<form method="POST" action="index.php?id='.$klienci_id.'">
+			if ($done == 0)
+			{
+				echo '	
+				<form method="POST" action="index.php?id='.$klienci_id.'">
 					<button type="submit" name="diagnose" value="diagnose" class="button">Uzupełnij diagnozę</button>
-				</form>
-				</div>';
+				</form>';	
+			}
+			else
+			{
+				echo '
+					<button type="button" disabled>Naprawa Zakończona</button>';
+			}		
+				echo '</div>';
 				if ($done == 0)
 				{
 					echo '
