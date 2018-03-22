@@ -1,0 +1,4 @@
+Obrazek, który mniej wiêcej pokazuje okolicê problemu.
+Mo¿liwoœæ wpisania diagnozy(wywiad klienta) i naprawy(co zosta³o zrobione).
+Uzupe³niæ dane samochodu o tablicê rejestracyjn¹.
+Dodaæ mo¿liwoœæ wpisywania danych z przegl¹du.

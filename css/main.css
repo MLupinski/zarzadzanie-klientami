@@ -18,6 +18,65 @@ body
 	box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
 }
 
+.client
+{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 48px;
+	margin-top: 10vh;
+	margin-left: 8vw;
+	line-height: 26vh;
+	float: left;
+	width: 30vw;
+	height: 30vh;
+    background-color: rgb(109, 109, 255);
+	color: rgb(0, 0, 100);
+	text-align: center;
+	-webkit-box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
+	box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
+}
+
+.staff
+{
+	
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 48px;
+	margin-top: 10vh;
+	margin-left: 8vw;
+	float: left;
+	line-height: 26vh;
+	width: 30vw;
+	height: 30vh;
+    background-color: rgb(109, 109, 255);
+	color: rgb(0, 0, 100);
+	text-align: center;
+	-webkit-box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
+	box-shadow: 0px 5px 15px -4px rgba(0,0,0,1);
+}
+
+.client:hover
+{
+	background-color: rgba(0, 220, 60, .6);
+	color: rgb(0, 50, 0);
+	cursor: pointer;
+	transition: all 0.8s ease-in-out;
+	transform: scale(0.95) rotate(-5deg);
+	-webkit-transform: scale(0.95) rotate(-5deg);
+	-ms-transform: scale(0.95) rotate(-5deg);
+}
+
+.staff:hover
+{
+	background-color: rgba(0, 220, 60, .6);
+	color: rgb(0, 50, 0);
+	cursor: pointer;
+	transition: all 0.8s ease-in-out;
+	transform: scale(0.95) rotate(5deg);
+	-webkit-transform: scale(0.95) rotate(5deg);
+	-ms-transform: scale(0.95) rotate(5deg);
+}
+
 .form
 {
 	margin-top: 5%;
@@ -39,7 +98,7 @@ body
 
 .formularz label
 {
-	 display:block;
+	display:block;
     margin-bottom:5px;
     font-weight:bold;
     text-transform: uppercase; 
@@ -112,6 +171,7 @@ th
 
 tr
 {
+	height: 50px;
 	padding-bottom: 15px;
 	width: 200px;
 	font-size: 18px;
@@ -124,30 +184,54 @@ tr
 	color: black;
 }
 
-button
+.button
 {
 	font-family: 'Ubuntu', sans-serif;
 	margin-top: 5%;
+	border: none;
 	padding: 10px;
 	background-color: #3366ff;
 	color: white;
-	border: none;
+	text-decoration: none;
 	-webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
 }
 
-form button:hover
+.button:hover
 {
-	color: #ececec;
-	background-color: #0000FF ;
+	background-color: #FF0001 ;
 	cursor: pointer;
 }
 
-form button:focus
+.button:focus
 {
-	color: #ececec;
-	background-color: #0000FF ;
+	background-color: #FF0001 ;
+}
+
+.button2
+{
+	font-family: 'Ubuntu', sans-serif;
+	margin-top: 5%;
+	border: none;
+	padding: 10px;
+	background-color: #33cc00;
+	color: white;
+	text-decoration: none;
+	-webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
+}
+
+.button2:hover
+{
+	background-color: #009900;
+	cursor: pointer;
+}
+
+.button2:focus
+{
+	background-color: #009900;
 }
 
 .lowlet
@@ -162,12 +246,135 @@ form button:focus
 	background-color: rgba(255, 109, 109, .2); 
 	color:rgb(112, 0, 0); 
 	font-size: 25px;
-	width: 500px;
+	width: 50vw;
 	padding: 10px;
 	margin: 15px;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	
+}
+
+.noerror
+{
+	border-radius: 20px;
+	background-color: rgba(109, 255, 109, .2); 
+	color:rgb(0, 100, 0); 
+	font-size: 25px;
+	width: 50vw;
+	padding: 10px;
+	margin: 15px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.data
+{
+	text-align: center;
+	margin: 0 auto;
+	padding: 1%;
+	width: 30vw;
+	float:left;
+}
+
+.diagnose
+{
+	margin: 0 auto;
+	padding: 1%;
+	width: 50vw;
+	float:right;
+}
+
+.diagnose p
+{
+	font-size: 32px;
+	color: red;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.data p
+{
+	font-size: 32px;
+	color: red;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.diag
+{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.diag-img img
+{
+	text-align: center;
+	margin-left: 25%;
+	width: 500px;
+	padding: 10px;
+}
+
+.inter
+{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.inter label
+{
+	display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+    text-transform: uppercase; 
+    font-size:12px; 
+    color:#555555; 
+}
+
+.inter textarea
+{
+	text-align: center;
+	padding:5px; 
+	border-radius:3px; 
+	border:1px solid #ccc; 
+	margin-bottom:25px; 
+	width:250px; 
+	height: 250px;
+}
+
+.inter input
+{
+	padding:5px; 
+	border-radius:3px; 
+	border:1px solid #ccc; 
+	margin-bottom:25px; 
+	width:245px; 
+	text-align: center;
+}
+
+.inter textarea:hover, input:hover
+{
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(51,214,255,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(51,214,255,1);
+	box-shadow: 0px 0px 5px 0px rgba(51,214,255,1);
+	border: 1px solid rgba(51,214,255,.5);
+}
+
+.inter textarea:focus, input:focus
+{
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(51,214,255,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(51,214,255,1);
+	box-shadow: 0px 0px 5px 0px rgba(51,214,255,1);
+	border: 1px solid rgba(51,214,255,.5);
+	color: #339900;
+}
+
+.inter ul
+{
+	font-size: 16px;
+	color: red;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: left;
+	list-style-type: none;
 }
